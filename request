@@ -1,9 +1,0 @@
-text                响应内容
-content             二进制响应内容
-encoding            文本编码
-headers             响应头
-request.headers     请求头
-cookies             服务端cookies
-
-raise_for_status()  4xx客户端错误或者5XX服务器错误响应时抛出异常
-json()              json响应内容
