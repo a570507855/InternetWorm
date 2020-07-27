@@ -1,0 +1,30 @@
+
+**************连接
+普通连接
+    redis_conn = redis.Redis(host='127.0.0.1', port= 6379, password= 'your pw', db= 0)
+连接池
+    redis_pool = redis.ConnectionPool(host='127.0.0.1', port= 6379, password= 'your pw', db= 0)
+    redis_conn = redis.Redis(connection_pool= redis_pool)
+**************数据类型
+    字符串----哈希----列表----集合----有序集合
+**************通用操作
+    delete(name)    删除某键值
+    exists(name)    检测是否存在键
+    keys(pattern='*')   根据* ？等通配符匹配获取redis的键
+    rename(src, dst)    重命名
+    move(name, db))     将redis的某个键值移动到指定的db下
+    randomkey()         随机获取一个redis的name（不删除）
+    type(name)          获取name对应值的类型
+
+
+**************命令行命令
+    keys *          查询所有键
+    flushdb         删除当前数据库中的所有Key
+    flushall        删除所有数据库中的key
+
+**************登录
+    redis-cli -h 127.0.0.1 -p 6379 -a myPassword
+
+    TRUNCATE web_url
+
+
